@@ -1,0 +1,1099 @@
+/* Start normalization */
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: MiSansLatin-Regular;
+}
+
+body {
+    height: 4000px;
+    /* background-color: #f7f7f7; */
+}
+
+/* End normalization */
+
+/* Start adding font face */
+@font-face {
+    font-family: MiSansLatin-Regular;
+    src: url(../assets/fonts/woff/MiSansLatin-Regular.woff);
+    src: url(../assets/fonts/woff/MiSansLatin-Regular.woff);
+    src: url(../assets/fonts/ttf/MiSansLatin-Regular.ttf);
+    src: url(../assets/fonts/otf/MiSansLatin-Regular.otf);
+}
+
+/* End adding font face */
+/* Start header */
+/* Start navbar style */
+header nav {
+    position: fixed;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    padding: 0px 3%;
+    box-shadow: 0 6px 16px 0 rgba(25, 25, 25, .06);
+    z-index: 5;
+}
+
+header nav div {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-left a,
+.navbar-right a {
+    font-family: MiSansLatin-Regular;
+    font-size: 16px;
+    color: black;
+    position: relative;
+    transition: all 8ms;
+
+}
+
+.navbar-left a:hover,
+.navbar-right a:hover {
+    color: #ff6900;
+}
+
+.navbar-left .nav-border::before,
+.navbar-right .nav-border::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #ff6900;
+    top: calc(100% + 17px);
+    visibility: hidden;
+    opacity: 0;
+    transition: all 8ms;
+
+}
+
+.navbar-left .nav-border:hover:before,
+.navbar-right .nav-border:hover:before {
+    visibility: visible;
+    opacity: 1;
+    color: #ff6900;
+}
+
+/*Start Left navbar */
+.navbar-left {
+    display: flex;
+    justify-content: left;
+    gap: 48px;
+}
+
+
+
+.home-logo {
+    font-size: 22px;
+    background-color: #ff6900;
+    color: white;
+    border-radius: 13px;
+    padding: 6px 6px;
+
+}
+
+.navbar-poco-li {
+    position: relative;
+}
+
+.navbar-poco-text {
+    display: flex;
+
+}
+
+.navbar-poco-image {
+    display: flex;
+    position: absolute;
+    width: 52px;
+    height: 30px;
+    opacity: 0;
+    transition: all 8ms;
+}
+
+.navbar-poco-text:hover .navbar-poco-image {
+    opacity: 1;
+}
+
+/*End Left navbar */
+
+/* Start drop down mobile */
+
+
+
+
+.mobile-dropdown-menu {
+    display: flex;
+    justify-content: space-between;
+    z-index: 4;
+
+}
+
+.mobile-dropdown {
+    padding: 30px 3%;
+    height: 0px;
+    width: 100%;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background-color: white;
+    box-shadow: 0 6px 16px 0 rgba(25, 25, 25, .06);
+    transition: all 500ms;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 4;
+
+}
+
+.mobile-dropdown>li {
+    padding: 20px 0px;
+}
+
+.mobile-navbar-text:hover .mobile-dropdown {
+    opacity: 1;
+    height: 450px;
+    visibility: visible;
+}
+
+.bx-right {
+    font-size: 24px;
+}
+
+
+.Phones-dropdown {
+    position: absolute;
+    visibility: hidden;
+}
+
+.Phones-dropdown>li {
+    padding: 10px 0px;
+}
+
+.Phones-dropdown>li>a {
+    color: thistle;
+}
+
+.Phones-text-dropdown:hover .Phones-dropdown {
+    visibility: visible;
+}
+
+.Phones-text-dropdown:hover .bx-right {
+    transition: all 200ms;
+    transform: rotate(90deg);
+}
+
+
+
+/* End drop down mobile */
+/* Start Xiaomi series card */
+
+.Xiaomi-series-dropdown {
+    display: flex;
+    gap: 20px;
+    padding-right: 5%;
+    padding-left: 13%;
+    ;
+}
+
+.card {
+    display: flex;
+    background-color: rgba(216, 191, 216, 0.288);
+    border-radius: 10px;
+    width: 240px;
+    height: 300px;
+    padding: 5px 5%;
+
+
+}
+
+.card img:hover {
+    transition: all 0.5s;
+    transform: translateY(-20px)
+}
+
+.card p {
+    padding: 5px 25%;
+    color: black;
+    font-size: 12px;
+}
+
+
+
+/* End Xiaomi series dropdown */
+
+
+
+/* Start Right navbar */
+.navbar-right {
+    display: flex;
+    justify-content: right;
+    gap: 48px;
+}
+
+.navbar-right-icon {
+    font-size: 22px;
+}
+
+/* Start navbar user icon dropdown */
+.navbar-user-icon {
+    position: relative;
+    display: flex;
+    z-index: 4;
+}
+
+.navbar-user-icon ul {
+    position: absolute;
+    right: 5%;
+    top: 40px;
+    background-color: white;
+    padding: 10px 0px;
+    width: 100px;
+    border-radius: 10px;
+    visibility: hidden;
+    box-shadow: 0px 0px 3px 2px rgba(25, 25, 25, .06);
+    transition: all 0.1s;
+}
+
+.navbar-user-icon ul li {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0px;
+}
+
+.navbar-user-icon ul li a {
+    color: thistle;
+}
+
+.navbar-user-icon ul li a:hover {
+    color: black;
+    text-decoration: underline;
+
+}
+
+.navbar-user-icon:hover .user-icon-dropdown {
+    visibility: visible;
+}
+
+.menu-icon {
+    color: black;
+    font-size: 20px;
+    display: none;
+}
+
+/* Start navbar user icon dropdown */
+
+/* End Right navbar */
+
+/* End navbar style */
+
+
+/* Start banner Style */
+.banner {
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    position: sticky;
+}
+
+.banner img {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    object-position: center;
+}
+
+.banner-text {
+    position: absolute;
+    padding: 0px 0px 2% 8%;
+    text-align: justify;
+}
+
+.banner-text p {
+    margin: 10px 0px;
+    font-family: MiSansLatin-Regular;
+    font-size: 16px;
+    word-spacing: 5px;
+}
+
+.banner-text button {
+    margin-top: 50px;
+    border: none;
+    padding: 10px 25px;
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+    font-size: 16px;
+}
+
+.banner-icon {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 4%;
+    align-items: center;
+
+}
+
+.banner-icon i {
+    font-size: 36px;
+    border: none;
+    background-color: rgba(128, 128, 128, 0.238);
+    color: white;
+    border-radius: 15px;
+    padding: 5px 5px;
+}
+
+.banner-icon i:hover {
+    background-color: gray;
+}
+
+.banner-icon .icon-chevron-right {
+    justify-content: right;
+}
+
+.banner-icon .icon-chevron-left {
+    justify-content: left;
+}
+
+/* Start banner Style */
+/* End header */
+
+/* Start featured products Section */
+.featured-products {
+    width: 100%;
+    min-height: 150vh;
+    background-color: #e8e8e8;
+
+}
+
+.featured-products-section {
+    width: 100%;
+    min-height: 100%;
+    padding: 8% 5%;
+}
+
+.featured-header-text>h2 {
+    display: flex;
+    /* width: 100%; */
+    color: black;
+    justify-content: center;
+    font-size: 30px;
+    margin-bottom: 48px;
+}
+
+.featured-header {
+    margin-bottom: 32px;
+}
+
+.featured-header ul {
+    display: flex;
+    justify-content: center;
+    gap: 56px;
+
+}
+
+.featured-header ul li a {
+    color: black;
+    font-size: 16px;
+}
+
+.featured-products-center {
+    background-color: white;
+    padding: 24px;
+    min-height: 684px;
+    /* width: 100%; */
+    border-radius: 25px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+
+}
+
+.featured-products-top-left {
+    grid-column: 1/3;
+    overflow: hidden;
+    border-radius: 15px 0 0 15px;
+
+}
+
+.featured-products-top-left img {
+    width: 100%;
+    height: 100%;
+    object-position: center;
+    transition: all 0.5s;
+}
+
+.featured-products-top-left:hover img {
+    transform: scale(1.05);
+}
+
+.featured-products-top-right {
+    grid-column: 3/5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #f2f2f2;
+    border-radius: 0px 15px 15px 0px;
+}
+
+.featured-products-top-right h2 {
+    font-size: 26px;
+
+}
+
+.featured-products-top-right h3 {
+    font-size: 16px;
+    margin-top: 12px;
+}
+
+.featured-products-top-right span {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.featured-products-top-right button {
+    margin-top: 12px;
+    border: none;
+    padding: 8px 25px;
+    font-size: 16px;
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+    opacity: 0;
+    visibility: none;
+    transition: all .3s;
+    transform: translateY(80px);
+}
+
+.featured-products-top-right:hover button {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.featured-product-card {
+    grid-column: span 1;
+    display: flex;
+    flex-direction: column;
+    background-color: #f2f2f2;
+    border-radius: 15px;
+    justify-content: center;
+    text-align: center;
+}
+
+.featured-product-card-content {
+    margin-top: 12px;
+}
+
+.featured-product-card-content h2 {
+    font-size: 22px;
+}
+
+.featured-product-card-content h3 {
+    margin-top: 12px;
+    font-size: 16px;
+    transition: all .3s;
+
+}
+
+.featured-product-card-button button {
+    border: none;
+    padding: 8px 25px;
+    font-size: 16px;
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+    transform: translateY(30px);
+    opacity: 0;
+    visibility: hidden;
+    transition: all .3s;
+}
+
+.featured-product-card-image img {
+    transition: all .3s;
+}
+
+.featured-product-card:hover img {
+    transform: scale(1.05);
+}
+
+.featured-product-card:hover .featured-product-card-button button {
+    transform: translateY(-20px);
+    opacity: 1;
+    visibility: visible;
+}
+
+.featured-product-card:hover .featured-product-card-content h3 {
+    transform: translateY(-20px);
+    opacity: 0;
+    visibility: hidden;
+}
+
+/* End featured products Section */
+
+/* Start Explore Xiaomi  Style */
+
+.Explore-Xiaomi {
+    width: 100%;
+    height: 600px;
+    background-color: #e8e8e8;
+
+}
+
+.Explore-Xiaomi-header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.Explore-Xiaomi-header h2 {
+    position: absolute;
+    font-size: 30px;
+}
+
+.Explore-Xiaomi-header div {
+    display: flex;
+    margin-right: 5%;
+    position: absolute;
+    right: 0;
+    gap: 30px;
+}
+
+.Explore-Xiaomi-header div i {
+    font-size: 30px;
+    background-color: rgb(191, 191, 191);
+    border-radius: 10px;
+}
+
+.Explore-Xiaomi-Center {
+    width: 100%;
+    display: flex;
+    gap: 20px;
+    overflow: scroll;
+    overflow: hidden;
+    justify-content: center;
+}
+
+.Explore-Xiaomi-Card {
+    margin-top: 88px;
+    height: 480px;
+    min-width: 664px;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.Explore-Xiaomi-Card-image {
+    width: 100%;
+    height: 70%;
+}
+
+.Explore-Xiaomi-Card-image img {
+    width: 100%;
+    height: 100%;
+}
+
+.Explore-Xiaomi-Card-text {
+    width: 100%;
+    height: 30%;
+    background-color: white;
+    padding: 42px 88px 0;
+    color: black;
+    text-align: center;
+}
+
+.Explore-Xiaomi-Card-text h3 {
+    margin-bottom: 10px;
+    font-size: 16px;
+
+}
+
+.Explore-Xiaomi-Card-text p {
+    font-size: 14px;
+    color: rgb(53, 52, 52);
+    transition: all .3s;
+}
+
+.Explore-Xiaomi-Card-text button {
+    border: none;
+    background-color: black;
+    color: white;
+    padding: 8px 20px;
+    letter-spacing: 2px;
+    border-radius: 15px;
+    transform: translateY(40px);
+    visibility: hidden;
+    transition: all .3s;
+    opacity: 0;
+}
+
+.Explore-Xiaomi-Card:hover p {
+    transform: translateY(-40px);
+    opacity: 0;
+    visibility: hidden;
+
+}
+
+.Explore-Xiaomi-Card:hover .Explore-Xiaomi-Card-text button {
+    transform: translateY(-30px);
+    visibility: visible;
+    opacity: 1;
+}
+
+/* End Explore Xiaomi  Style */
+
+/* Start Xiaomi Support  */
+.Xiaomi-Support {
+    width: 100%;
+    height: 55vh;
+    background-color: #e8e8e8;
+    padding: 0 8%;
+}
+
+.Xiaomi-Support-center {
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+}
+
+.Xiaomi-Support-header h3 {
+    display: flex;
+    font-size: 30px;
+    margin-bottom: 48px;
+    justify-content: center;
+}
+
+.Xiaomi-Support-card {
+    width: 220px;
+    height: 176px;
+    text-align: center;
+}
+
+.Xiaomi-Support-icon {
+    width: 100%;
+    font-size: 56px;
+    color: #898989;
+    transition: all .3s;
+
+}
+
+.Xiaomi-Support-card h6 {
+    font-size: 22px;
+    margin: 20px 0;
+    transition: all .3s;
+
+}
+
+.Xiaomi-Support-card p {
+    font-size: 16px;
+    color: #898989;
+    transition: all .3s;
+
+}
+
+.Xiaomi-Support-card:hover .Xiaomi-Support-hover {
+    color: #ff6900;
+}
+
+.Explore-Xiaomi-Card-image {
+    overflow: hidden;
+}
+
+
+/* End Xiaomi Support  */
+
+/* Start footer Style */
+footer {
+    width: 100%;
+    background-color: #191919;
+}
+
+.footer-footnote {
+    width: 100%;
+    height: 116px;
+    padding: 0 48px;
+    background-color: #d3d3d3;
+    line-height: 116px;
+    color: #787878;
+    font-size: 16px;
+}
+
+.footer-main {
+    width: 100%;
+    padding: 0 48px;
+    padding-top: 64px;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.footer-content{
+display: grid; 
+width: 75%;
+grid-template-columns: repeat(3,1fr); 
+}
+
+.footer-main h3 {
+    color: white;
+    margin-bottom: 16px;
+}
+
+.footer-main ul {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+}
+
+.footer-main ul li a {
+    color: #898989;
+    font-size: 14px;
+}
+
+.footer-ul-icon ul {
+    display: flex;
+    flex-direction: row !important;
+}
+
+.footer-aside ul {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 24px;
+}
+
+.footer-aside ul li a {
+    font-size: 26px;
+
+}
+
+.footer-main input {
+    border: solid 1px white;
+    color: white;
+    background-color: #191919;
+    padding: 10px 35px;
+    border-radius: 15px;
+
+}
+
+.footer-footer {
+    padding: 38px 48px;
+    margin-top: 60px;
+    border-top: white solid 1px;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+
+.footer-footer-right {
+    justify-content: right;
+    color: white;
+}
+
+.footer-footer-right a {
+    margin-left: 20px;
+    color: white;
+}
+
+.footer-footer-left {
+    display: flex;
+    color: white;
+}
+.myName h5{
+background-color: rgb(53, 52, 52);
+color: white;
+text-align: center;
+padding-block: 10px;
+font-size: 16px;
+}
+
+/* End footer Style */
+
+/* Media query */
+@media screen and (max-width:1601px) {
+    .banner {
+        height: 600px;
+    }
+}
+
+@media screen and (max-width:1200px) {
+
+    header nav li,
+    .navbar-user {
+        display: none;
+
+    }
+
+    .menu-icon-li,
+    .menu-icon,
+    .bx-search-li,
+    .home-logo-li {
+        display: inline-block;
+    }
+
+    .navbar-right {
+        gap: 10px;
+    }
+
+    .banner {
+        height: 476px;
+    }
+
+}
+
+@media screen and (max-width:1126px) {
+    .featured-header-text>h2 {
+        font-size: 26px;
+    }
+
+    .featured-header ul li a {
+        font-size: 15px;
+    }
+
+    .featured-products-top-right h2 {
+        font-size: 22px;
+
+    }
+
+    .featured-products-top-right h3 {
+        font-size: 14px;
+    }
+
+    .featured-products-top-right span {
+        font-size: 14px;
+    }
+
+    .featured-product-card-content h2 {
+        font-size: 16px;
+    }
+
+    .featured-product-card-content h3 {
+        font-size: 14px;
+    }
+    .footer-main{
+        flex-direction: column-reverse;
+    }
+    .footer-aside{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        margin-bottom: 30px;
+    }
+    .footer-aside div{
+         display: flex;
+        flex-direction:column ; 
+    }
+
+ .footer-content{
+    width: 100% !important;
+ }
+ .footer-footer{
+        padding: 30px 48px !important;
+ }
+}
+
+@media screen and (max-width:840px) {
+    .banner {
+        width: 100%;
+        height: 480px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .banner-text {
+        text-align: center;
+    }
+
+    .featured-products-center {
+        height: 100%;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        gap: 12px;
+    }
+
+    .featured-products-top-left {
+        grid-column: 1/3;
+        grid-row: 1/2;
+        border-radius: 0px;
+
+    }
+
+    .featured-products-top-left img {
+        object-fit: cover;
+    }
+
+    .featured-products-top-right {
+        grid-column: 1/3;
+        grid-row: 2/3;
+    }
+
+    .featured-product-card {
+        grid-column: span 1;
+    }
+}
+
+@media screen and (max-width:769px) {
+    .featured-header ul {
+        gap: 40px;
+    }
+
+    .featured-header ul li a {
+        font-size: 12px;
+    }
+
+    .banner-text {
+        height: 150px;
+        margin-bottom: 100px;
+    }
+
+    .banner p {
+        margin-top: 30px;
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width:675px) {
+    .Xiaomi-Support-center {
+        gap: 60px;
+    }
+
+    .Xiaomi-Support-card h6 {
+        font-size: 15px;
+    }
+
+    .footer-main input {
+        padding: 10px 15px;
+    }
+}
+
+@media screen and (max-width:598px) {
+    .featured-header ul {
+        gap: 15px;
+    }
+    .footer-main input {
+    padding: 5px 5px ;
+    }.footer-main ul  li a{
+/* font-size: 12px;     */
+    }
+    .footer-footer-right span{
+        
+    }
+}
+
+@media screen and (max-width:516px) {
+
+
+    .featured-products-section {
+        padding: 8% 0;
+        background-color: white;
+    }
+
+    .featured-products-center {
+        padding: 0;
+        border-radius: 0;
+        background-color: white;
+    }
+
+    .featured-products-top-right {
+        background-color: white;
+    }
+
+    .featured-product-card {
+        background-color: white;
+    }
+
+    .featured-product-card h3 {
+        font-size: 12px;
+    }
+
+    .banner-text {
+        height: 130px;
+        margin-bottom: 100px;
+    }
+
+    .banner p {
+        margin-top: 30px;
+        font-size: 10px;
+    }
+
+    .banner button {
+        padding: 10px 20px;
+        font-size: 12px;
+    }
+
+    .banner-icon i {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width:466px) {
+    .featured-header {
+        overflow-x: scroll;
+        width: 100vh;
+        overflow-x: hidden;
+
+    }
+
+    body {
+        width: 100vh;
+    }
+
+    @media screen and (max-width:413px) {
+        header nav {
+            height: 100px;
+        }
+    }
+
+    .home-logo {
+        font-size: 48px;
+    }
+
+    .navbar-right i {
+        font-size: 48px;
+    }
+
+    .banner {
+        height: 100vh;
+    }
+
+    .banner-text img {
+        width: 600px;
+        height: 300px;
+    }
+
+    .banner-text p {
+        margin: 0;
+        font-size: 20px;
+    }
+
+    .banner-text button {
+        font-size: 24px;
+    }
+
+    .featured-header ul {
+        gap: 40px;
+    }
+
+    .featured-header ul li a {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width:376px) {
+    .featured-header ul {
+        gap: 20px;
+    }
+
+    .featured-header ul li a {
+        font-size: 16px;
+    }
+}
