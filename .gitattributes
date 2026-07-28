@@ -1,0 +1,12 @@
+# تنظیمات تورفتگی برای همه فایل‌ها
+*.html    diff=html    tabwidth=4
+*.css     diff=css     tabwidth=4
+*.js      diff=javascript tabwidth=4
+*.json    diff=json    tabwidth=4
+
+# تنظیمات پایان خطوط
+* text=auto eol=lf
+
+# برای گوشی و نمایش بهتر
+*.html linguist-language=HTML
+*.css linguist-language=CSS
