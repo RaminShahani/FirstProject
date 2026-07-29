@@ -737,10 +737,10 @@ footer {
 
 }
 
-.footer-content{
-display: grid; 
-width: 75%;
-grid-template-columns: repeat(3,1fr); 
+.footer-content {
+    display: grid;
+    width: 75%;
+    grid-template-columns: repeat(3, 1fr);
 }
 
 .footer-main h3 {
@@ -809,12 +809,13 @@ grid-template-columns: repeat(3,1fr);
     display: flex;
     color: white;
 }
-.myName h5{
-background-color: rgb(53, 52, 52);
-color: white;
-text-align: center;
-padding-block: 10px;
-font-size: 16px;
+
+.myName h5 {
+    background-color: rgb(53, 52, 52);
+    color: white;
+    text-align: center;
+    padding-block: 10px;
+    font-size: 16px;
 }
 
 /* End footer Style */
@@ -880,25 +881,29 @@ font-size: 16px;
     .featured-product-card-content h3 {
         font-size: 14px;
     }
-    .footer-main{
+
+    .footer-main {
         flex-direction: column-reverse;
     }
-    .footer-aside{
+
+    .footer-aside {
         display: grid;
-        grid-template-columns: repeat(2,1fr);
+        grid-template-columns: repeat(2, 1fr);
         margin-bottom: 30px;
     }
-    .footer-aside div{
-         display: flex;
-        flex-direction:column ; 
+
+    .footer-aside div {
+        display: flex;
+        flex-direction: column;
     }
 
- .footer-content{
-    width: 100% !important;
- }
- .footer-footer{
+    .footer-content {
+        width: 100% !important;
+    }
+
+    .footer-footer {
         padding: 30px 48px !important;
- }
+    }
 }
 
 @media screen and (max-width:840px) {
@@ -979,14 +984,16 @@ font-size: 16px;
     .featured-header ul {
         gap: 15px;
     }
+
     .footer-main input {
-    padding: 5px 5px ;
-    }.footer-main ul  li a{
-/* font-size: 12px;     */
+        padding: 5px 5px;
     }
-    .footer-footer-right span{
-        
+
+    .footer-main ul li a {
+        /* font-size: 12px;     */
     }
+
+    .footer-footer-right span {}
 }
 
 @media screen and (max-width:516px) {
@@ -1096,4 +1103,19 @@ font-size: 16px;
     .featured-header ul li a {
         font-size: 16px;
     }
+}
+/* رفع مشکل زوم در گوشی */
+* {
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+img, video, iframe {
+    max-width: 100% !important;
+    height: auto !important;
+}
+
+body {
+    overflow-x: hidden;
+    width: 100%;
 }
