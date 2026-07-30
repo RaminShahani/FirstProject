@@ -7,12 +7,6 @@
     box-sizing: border-box;
     font-family: MiSansLatin-Regular;
 }
-
-body {
-    height: 4000px;
-    /* background-color: #f7f7f7; */
-}
-
 /* End normalization */
 
 /* Start adding font face */
